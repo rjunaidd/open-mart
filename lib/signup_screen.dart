@@ -26,7 +26,11 @@ class _SignupScreenState extends State<SignupScreen> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
+<<<<<<< HEAD
         physics:const NeverScrollableScrollPhysics(),
+=======
+        physics: NeverScrollableScrollPhysics(),
+>>>>>>> 1a114bc7059b1b566e2e887395c78608729dd927
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -42,6 +46,7 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
             ),
             const SizedBox(height: 10,),
+<<<<<<< HEAD
             const Padding(
               padding:  EdgeInsets.only(right: 110),
               child:   Text(
@@ -51,38 +56,103 @@ class _SignupScreenState extends State<SignupScreen> {
                     fontSize: 18,
                     fontWeight: FontWeight.normal),
               ),
+=======
+            const  Text(
+              "Let's create an account",
+              style: TextStyle(
+                  color: Colors.black87,
+                  fontSize: 16,
+                  fontWeight: FontWeight.normal),
+>>>>>>> 1a114bc7059b1b566e2e887395c78608729dd927
             ),
             const SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40),
+<<<<<<< HEAD
               child: MyTextField(hintText: "Email or Phone Number", controller: phoneNumber),
+=======
+              child: TextFormField(
+                keyboardType: TextInputType.emailAddress,
+                controller: phoneNumber,
+                decoration: InputDecoration(
+
+                  hintText: "Email or Phone Number",
+                  hintStyle: TextStyle(
+                      color: Colors.grey.shade700,
+                      fontSize: 16,
+                      fontWeight: FontWeight.normal),
+                ),
+              ),
+>>>>>>> 1a114bc7059b1b566e2e887395c78608729dd927
             ),
             const SizedBox(
               height: 10,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40),
+<<<<<<< HEAD
               child: MyTextField(hintText: "Full Name", controller: fullname)
+=======
+              child: TextFormField(
+                controller: fullname,
+                decoration: InputDecoration(
+                  hintText: "Full Name",
+                  hintStyle: TextStyle(
+                      color: Colors.grey.shade700,
+                      fontSize: 16,
+                      fontWeight: FontWeight.normal),
+                ),
+              ),
+>>>>>>> 1a114bc7059b1b566e2e887395c78608729dd927
             ),
             const SizedBox(
               height: 10,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40),
+<<<<<<< HEAD
               child: MyTextField(hintText: "Username", controller: username)
+=======
+              child: TextFormField(
+                controller: username,
+                decoration: InputDecoration(
+                  hintText: "Username",
+                  hintStyle: TextStyle(
+                      color: Colors.grey.shade700,
+                      fontSize: 16,
+                      fontWeight: FontWeight.normal),
+                ),
+              ),
+>>>>>>> 1a114bc7059b1b566e2e887395c78608729dd927
             ),
             const SizedBox(
               height: 10,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40),
+<<<<<<< HEAD
               child: MyTextField(hintText: "Password", controller: password)
+=======
+              child: TextFormField(
+                controller: password,
+                decoration: InputDecoration(
+                  suffixIcon: const Icon(Icons.visibility),
+                  label: const Text("Password"),
+                  hintText: "Password",
+                  hintStyle: TextStyle(
+                      color: Colors.grey.shade700,
+                      fontSize: 16,
+                      fontWeight: FontWeight.normal),
+                ),
+              ),
+>>>>>>> 1a114bc7059b1b566e2e887395c78608729dd927
             ),
             const SizedBox(
               height: 10,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40),
+<<<<<<< HEAD
               child: MyTextField(hintText: "Confirm Password", controller: confirmpassword)
             ),
             const SizedBox(height: 25,),
@@ -91,6 +161,23 @@ class _SignupScreenState extends State<SignupScreen> {
               onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context) =>const HomeScreen())),
             ),
             const SizedBox(height: 80,),
+=======
+              child: TextFormField(
+                controller: confirmpassword,
+                decoration: InputDecoration(
+                  suffixIcon: const Icon(Icons.visibility),
+                  hintText: "Confirm Password",
+                  hintStyle: TextStyle(
+                      color: Colors.grey.shade700,
+                      fontSize: 16,
+                      fontWeight: FontWeight.normal),
+                ),
+              ),
+            ),
+            const SizedBox(height: 25,),
+            const MyButton(name: "Sign Up"),
+            const SizedBox(height: 40,),
+>>>>>>> 1a114bc7059b1b566e2e887395c78608729dd927
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -102,7 +189,11 @@ class _SignupScreenState extends State<SignupScreen> {
                       fontWeight: FontWeight.normal),
                 ),
                 const SizedBox(
+<<<<<<< HEAD
                   width: 5,
+=======
+                  width: 20,
+>>>>>>> 1a114bc7059b1b566e2e887395c78608729dd927
                 ),
                 InkWell(
                   child:const Text(
@@ -119,7 +210,11 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
               ],
             ),
+<<<<<<< HEAD
             const SizedBox(height: 50,),
+=======
+            const SizedBox(height: 100,),
+>>>>>>> 1a114bc7059b1b566e2e887395c78608729dd927
           ],
         ),
       ),
