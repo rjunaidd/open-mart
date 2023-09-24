@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:open_mart/components/textfield.dart';
 import 'package:open_mart/forgot_password.dart';
-
+import 'package:open_mart/home_screen.dart';
 import 'components/my_button.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'components/text.dart';
 import 'signup_screen.dart';
 
@@ -27,7 +27,7 @@ class _SigninScreenState extends State<SigninScreen> {
         backgroundColor: Colors.white,
         body:  SingleChildScrollView(
           scrollDirection: Axis.vertical,
-          physics: NeverScrollableScrollPhysics(),
+          physics:const NeverScrollableScrollPhysics(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -44,7 +44,7 @@ class _SigninScreenState extends State<SigninScreen> {
               ),
               const SizedBox(height: 20,),
               const Padding(
-                padding: const EdgeInsets.only(  left: 1 , right: 20),
+                padding:  EdgeInsets.only(  left: 1 , right: 20),
                 child: Text(
                   "Im waiting for you please enter your detail",
                   style: TextStyle(
@@ -56,34 +56,14 @@ class _SigninScreenState extends State<SigninScreen> {
               const SizedBox(height: 20,),
               Padding(
                 padding: const EdgeInsets.only(left: 40, right: 40),
-                child: TextFormField(
-                  controller: username,
-                  decoration: InputDecoration(
-                    hintText: "Username Email or Phone Number",
-                    hintStyle: TextStyle(
-                        color: Colors.grey.shade700,
-                        fontSize: 16,
-                        fontWeight: FontWeight.normal),
-                  ),
-                ),
+                child: MyTextField(hintText: "Username Email or Phone Number", controller: username)
               ),
               const SizedBox(
                 height: 15,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 40, right: 40),
-                child: TextFormField(
-                  controller: password,
-                  decoration: InputDecoration(
-                    suffixIcon: const Icon(Icons.visibility),
-                    label: const Text("Password"),
-                    hintText: "Password",
-                    hintStyle: TextStyle(
-                        color: Colors.grey.shade700,
-                        fontSize: 16,
-                        fontWeight: FontWeight.normal),
-                  ),
-                ),
+                child: MyTextField(hintText: "Password",controller: password)
               ),
               const SizedBox(
                 height: 30,
@@ -129,7 +109,10 @@ class _SigninScreenState extends State<SigninScreen> {
               const SizedBox(
                 height: 30,
               ),
-              const MyButton(name: "Sign In"),
+              InkWell(
+                  child: const MyButton(name: "Sign In"),
+                onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context) =>const HomeScreen())),
+              ),
               const SizedBox(height: 60,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -154,7 +137,7 @@ class _SigninScreenState extends State<SigninScreen> {
                           fontWeight: FontWeight.bold),
                     ),
                     onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => SignupScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) =>const SignupScreen()));
                     },
                   ),
                 ],

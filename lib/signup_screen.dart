@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:open_mart/components/my_button.dart';
+import 'package:open_mart/components/textfield.dart';
+import 'package:open_mart/home_screen.dart';
 
 import 'components/text.dart';
 import 'signin_screen.dart';
@@ -24,7 +26,7 @@ class _SignupScreenState extends State<SignupScreen> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        physics: NeverScrollableScrollPhysics(),
+        physics:const NeverScrollableScrollPhysics(),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -40,99 +42,55 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
             ),
             const SizedBox(height: 10,),
-            const  Text(
-              "Let's create an account",
-              style: TextStyle(
-                  color: Colors.black87,
-                  fontSize: 16,
-                  fontWeight: FontWeight.normal),
+            const Padding(
+              padding:  EdgeInsets.only(right: 110),
+              child:   Text(
+                "Let's create an account",
+                style: TextStyle(
+                    color: Colors.black87,
+                    fontSize: 18,
+                    fontWeight: FontWeight.normal),
+              ),
             ),
             const SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40),
-              child: TextFormField(
-                keyboardType: TextInputType.emailAddress,
-                controller: phoneNumber,
-                decoration: InputDecoration(
-
-                  hintText: "Email or Phone Number",
-                  hintStyle: TextStyle(
-                      color: Colors.grey.shade700,
-                      fontSize: 16,
-                      fontWeight: FontWeight.normal),
-                ),
-              ),
+              child: MyTextField(hintText: "Email or Phone Number", controller: phoneNumber),
             ),
             const SizedBox(
               height: 10,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40),
-              child: TextFormField(
-                controller: fullname,
-                decoration: InputDecoration(
-                  hintText: "Full Name",
-                  hintStyle: TextStyle(
-                      color: Colors.grey.shade700,
-                      fontSize: 16,
-                      fontWeight: FontWeight.normal),
-                ),
-              ),
+              child: MyTextField(hintText: "Full Name", controller: fullname)
             ),
             const SizedBox(
               height: 10,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40),
-              child: TextFormField(
-                controller: username,
-                decoration: InputDecoration(
-                  hintText: "Username",
-                  hintStyle: TextStyle(
-                      color: Colors.grey.shade700,
-                      fontSize: 16,
-                      fontWeight: FontWeight.normal),
-                ),
-              ),
+              child: MyTextField(hintText: "Username", controller: username)
             ),
             const SizedBox(
               height: 10,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40),
-              child: TextFormField(
-                controller: password,
-                decoration: InputDecoration(
-                  suffixIcon: const Icon(Icons.visibility),
-                  label: const Text("Password"),
-                  hintText: "Password",
-                  hintStyle: TextStyle(
-                      color: Colors.grey.shade700,
-                      fontSize: 16,
-                      fontWeight: FontWeight.normal),
-                ),
-              ),
+              child: MyTextField(hintText: "Password", controller: password)
             ),
             const SizedBox(
               height: 10,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40),
-              child: TextFormField(
-                controller: confirmpassword,
-                decoration: InputDecoration(
-                  suffixIcon: const Icon(Icons.visibility),
-                  hintText: "Confirm Password",
-                  hintStyle: TextStyle(
-                      color: Colors.grey.shade700,
-                      fontSize: 16,
-                      fontWeight: FontWeight.normal),
-                ),
-              ),
+              child: MyTextField(hintText: "Confirm Password", controller: confirmpassword)
             ),
             const SizedBox(height: 25,),
-            const MyButton(name: "Sign Up"),
-            const SizedBox(height: 40,),
+            InkWell(
+                child: const MyButton(name: "Sign Up"),
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context) =>const HomeScreen())),
+            ),
+            const SizedBox(height: 80,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -144,7 +102,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       fontWeight: FontWeight.normal),
                 ),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 InkWell(
                   child:const Text(
@@ -161,7 +119,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
               ],
             ),
-            const SizedBox(height: 100,),
+            const SizedBox(height: 50,),
           ],
         ),
       ),
