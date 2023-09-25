@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:open_mart/components/item_container/items.dart';
 import 'package:open_mart/components/serach_appbar.dart';
 import 'package:open_mart/drawer/drawers.dart';
 
@@ -23,6 +24,15 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       drawer: Drawers(),
+      body: Column(
+        children: [
+          Row(
+            children: [
+              ItemContainer(),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

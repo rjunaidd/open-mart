@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:open_mart/drawer/drawer_components.dart';
+import 'package:open_mart/signup_screen.dart';
 
 class Drawers extends StatefulWidget {
   const Drawers({super.key});
@@ -46,19 +47,46 @@ class _DrawersState extends State<Drawers> {
                 ],
               ),
             ),
-            DrawerButton(buttonName: "Edit Account"),
-            SizedBox(
-              height: 10,
+            const SizedBox(
+              height: 30,
             ),
-            DrawerButton(buttonName: "Manage Address"),
-            SizedBox(
-              height: 10,
+            InkWell(
+              child:const DrawerButton(
+                  Iconbtton: Icons.person,
+                  buttonName: "Edit Account"
+              ),
+              onTap: (){},
             ),
-            DrawerButton(buttonName: "My Order"),
-            SizedBox(
-              height: 10,
+            const SizedBox(
+              height: 30,
             ),
-            DrawerButton(buttonName: "Sign Out"),
+            InkWell(
+              child:const DrawerButton(
+                  Iconbtton: Icons.location_on,
+                  buttonName: "Manage Address"
+              ),
+              onTap: (){},
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            InkWell(
+              child:const DrawerButton(
+                  Iconbtton: Icons.location_on,
+                  buttonName: "My Order"
+              ),
+              onTap: (){},
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            InkWell(
+              child:const DrawerButton(
+                  Iconbtton: Icons.logout,
+                  buttonName: "Sign Out"
+              ),
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const SignupScreen())),
+            ),
           ],
         ),
       ),

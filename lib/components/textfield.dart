@@ -4,8 +4,9 @@ class MyTextField extends StatelessWidget {
   final TextEditingController controller;
   final Widget? leading;
   final Widget? trailIcon;
+  final bool? obscureText;
   final String? hintText;
-
+  final Icon? suffixIcon;
   final TextInputType? keyboardType;
   final String? Function(String?)? validator;
   final int? maxLines;
@@ -25,8 +26,9 @@ class MyTextField extends StatelessWidget {
  const MyTextField({
     super.key,
     required this.hintText,
-
     required this.controller,
+   this.obscureText,
+   this.suffixIcon,
     this.leading,
     this.keyboardType,
     this.onTap,
