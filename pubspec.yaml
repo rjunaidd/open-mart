@@ -78,6 +78,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: Oswald
+      fonts:
+        - asset: fonts/Oswald-Light.ttf
     - family: Gloock
       fonts:
         - asset: fonts/Gloock-Regular.ttf
