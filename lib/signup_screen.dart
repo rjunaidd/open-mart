@@ -106,7 +106,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 hintText:"Password" ,
                 obscureText: true,
                 controller: _passwordController ,
-                suffixIcon: Icon(Icons.visibility),)
+               suffixIcon: Icons.visibility,)
             ),
             const SizedBox(
               height: 10,

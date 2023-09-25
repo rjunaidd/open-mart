@@ -82,6 +82,26 @@ class _DrawersState extends State<Drawers> {
             ),
             InkWell(
               child:const DrawerButton(
+                  Iconbtton: Icons.favorite,
+                  buttonName: "Add Favorite"
+              ),
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const SignupScreen())),
+            ),
+        const SizedBox(
+        height: 30,
+      ),
+      InkWell(
+        child:const DrawerButton(
+            Iconbtton: Icons.history,
+            buttonName: "Order History"
+        ),
+        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const SignupScreen())),
+      ),
+            const SizedBox(
+              height: 30,
+            ),
+            InkWell(
+              child:const DrawerButton(
                   Iconbtton: Icons.logout,
                   buttonName: "Sign Out"
               ),

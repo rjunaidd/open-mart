@@ -6,7 +6,7 @@ class MyTextField extends StatelessWidget {
   final Widget? trailIcon;
   final bool? obscureText;
   final String? hintText;
-  final Icon? suffixIcon;
+  final IconData? suffixIcon;
   final TextInputType? keyboardType;
   final String? Function(String?)? validator;
   final int? maxLines;
