@@ -52,7 +52,7 @@ class _DrawersState extends State<Drawers> {
             ),
             InkWell(
               child:const DrawerButton(
-                  Iconbtton: Icons.person,
+                  Iconbtton: Icons.person_2_outlined,
                   buttonName: "Edit Account"
               ),
               onTap: (){},
@@ -62,7 +62,7 @@ class _DrawersState extends State<Drawers> {
             ),
             InkWell(
               child:const DrawerButton(
-                  Iconbtton: Icons.location_on,
+                  Iconbtton: Icons.location_on_outlined,
                   buttonName: "Manage Address"
               ),
               onTap: (){},
@@ -72,7 +72,7 @@ class _DrawersState extends State<Drawers> {
             ),
             InkWell(
               child:const DrawerButton(
-                  Iconbtton: Icons.location_on,
+                  Iconbtton: Icons.location_on_outlined,
                   buttonName: "My Order"
               ),
               onTap: (){},
@@ -82,10 +82,10 @@ class _DrawersState extends State<Drawers> {
             ),
             InkWell(
               child:const DrawerButton(
-                  Iconbtton: Icons.favorite,
+                  Iconbtton: Icons.favorite_border_outlined,
                   buttonName: "Add Favorite"
               ),
-              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const SignupScreen())),
+              onTap: () {}
             ),
         const SizedBox(
         height: 30,
@@ -95,7 +95,7 @@ class _DrawersState extends State<Drawers> {
             Iconbtton: Icons.history,
             buttonName: "Order History"
         ),
-        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const SignupScreen())),
+        onTap: () {}
       ),
             const SizedBox(
               height: 30,

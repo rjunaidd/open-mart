@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'package:open_mart/components/serach_appbar.dart';
 import 'package:open_mart/drawer/drawers.dart';
-import 'package:open_mart/item_container/items.dart';
+import 'package:open_mart/product_list/product_list_screen.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,28 +16,19 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         backgroundColor: Colors.teal.shade400,
         title: SearchBar(),
         actions: [
-          IconButton(onPressed: (){}, icon:const Icon(Icons.shopping_cart))
-        ],
-      ),
-      drawer: Drawers(),
-      body: Column(
-        children: [
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                ItemContainer(),
-              ],
-            ),
+          Badge(
+            child: IconButton(onPressed: (){}, icon:const Icon(Icons.shopping_cart)),
           ),
-
+         const SizedBox(width: 10,),
         ],
       ),
+      drawer:const Drawers(),
+      body:ProductListScreen(product: '',),
     );
   }
 }

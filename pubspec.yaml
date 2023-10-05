@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   loading_animation_widget: ^1.2.0+4
   shared_preferences: ^2.2.1
+  badges: ^3.1.1
 
 
 dev_dependencies:
@@ -64,6 +65,18 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
+    - assets/icon/
+    - assets/belts/
+    - assets/Casual Shoes/
+    - assets/Perfumes/
+    - assets/shirts/
+    - assets/Pents/
+    - assets/Women Shirt/
+    - assets/Short Nikar/
+    - assets/sports shoes/
+    - assets/t shirts/
+    - assets/Women Heels/
+    - assets/Women Pents/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -87,6 +100,12 @@ flutter:
     - family: DM Serif Display
       fonts:
         - asset: fonts/DMSerifDisplay-Regular.ttf
+    - family: Lexend
+      fonts:
+        - asset: fonts/Lexend-Medium.ttf
+    - family: Skranji
+      fonts:
+        - asset: fonts/Skranji-Regular.ttf
 
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
