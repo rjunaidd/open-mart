@@ -10,16 +10,16 @@ class DrawerButton extends StatelessWidget {
     return Row(
       children: [
       const  SizedBox(
-          width: 10,
+          width: 40,
         ),
         Icon(Iconbtton),
        const SizedBox(
-          width: 70,
+          width: 20,
         ),
       Text(
       buttonName,
       style:
-      TextStyle(color: Colors.black, fontSize: 20, fontFamily: "Skranji"),
+      TextStyle(color: Colors.black, fontSize: 20, fontFamily: "Lexend"),
     ),
       ],
     );

@@ -137,7 +137,7 @@ class _SigninScreenState extends State<SigninScreen> {
                 height: 30,
               ),
               InkWell(
-                child:  MyButton(name: "Sign In"),
+                child:const  MyButton(name: "Sign In"),
                 onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) =>const HomeScreen())),
               ),
               const SizedBox(height: 60,),
@@ -164,7 +164,7 @@ class _SigninScreenState extends State<SigninScreen> {
                           fontWeight: FontWeight.bold),
                     ),
                     onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => SignupScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) =>const SignupScreen()));
                     },
                   ),
                 ],

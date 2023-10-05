@@ -22,7 +22,7 @@ class _PasswordRecoverState extends State<PasswordRecover> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 10,right: 60),
+            padding: const EdgeInsets.only(left: 1,right: 60),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [

@@ -68,13 +68,16 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
             ),
             const SizedBox(height: 10,),
-            const  Text(
-              "Let's create an account",
-              style: TextStyle(
-                  color: Colors.black87,
-                  fontSize: 16,
-                  fontWeight: FontWeight.normal),
+            const  Padding(
+                padding: const EdgeInsets.only(left: 1, right: 145),
+                child: Text(
+                "Let's create an account",
+                style: TextStyle(
+                    color: Colors.black87,
+                    fontSize: 16,
+                    fontWeight: FontWeight.normal),
             ),
+              ),
             const SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40),
@@ -85,7 +88,7 @@ class _SignupScreenState extends State<SignupScreen> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40),
-              child: MyTextField(hintText: "Full Nam", controller: _fullnameController,)
+              child: MyTextField(hintText: "Full Name", controller: _fullnameController,)
             ),
             const SizedBox(
               height: 10,
