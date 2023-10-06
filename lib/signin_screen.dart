@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:open_mart/components/textfield.dart';
 import 'package:open_mart/forgot_password.dart';
 import 'package:open_mart/home_screen.dart';
-
+import 'package:open_mart/remember_me.dart';
 import 'components/my_button.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
 import 'components/text.dart';
 import 'signup_screen.dart';
 
@@ -53,6 +51,9 @@ class _SigninScreenState extends State<SigninScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(
+                height: 50,
+              ),
               Padding(
                 padding: const EdgeInsets.only(right: 80),
                 child:Column(
@@ -98,25 +99,9 @@ class _SigninScreenState extends State<SigninScreen> {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 40),
-                    child: SizedBox(
-                        height: 24.0,
-                        width: 24.0,
-                        child: Theme(
-                          data: ThemeData(
-                              unselectedWidgetColor: const Color(0xff00C8E8)),
-                          child: Checkbox(
-                              activeColor: const Color(0xff00C8E8),
-                              value: isCheckedRememberMe,
-                              onChanged: actionRemeberMe(isCheckedRememberMe)),
-                        )),
+                    padding: const EdgeInsets.only(left: 25),
+                    child: RememberMe(),
                   ),
-                  const SizedBox(width: 10.0),
-                  Text("Remember Me",
-                      style: TextStyle(
-                        color: Colors.grey.shade900,
-                        fontSize: 16,
-                      )),
                   const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(right: 40),
@@ -176,15 +161,4 @@ class _SigninScreenState extends State<SigninScreen> {
     );
   }
 
-  actionRemeberMe(bool value) {
-    isCheckedRememberMe = value;
-    SharedPreferences.getInstance().then(
-      (prefs) {
-        prefs.setBool("remember_me", value);
-      },
-    );
-    setState(() {
-      isCheckedRememberMe = value;
-    });
-  }
 }
