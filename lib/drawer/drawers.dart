@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:open_mart/drawer/drawer_components.dart';
+import 'package:open_mart/drawer/Compenent/drawer_components.dart';
+import 'package:open_mart/drawer/dropdown_menu.dart';
 import 'package:open_mart/signup_screen.dart';
 
 class Drawers extends StatefulWidget {
@@ -50,12 +51,17 @@ class _DrawersState extends State<Drawers> {
             const SizedBox(
               height: 30,
             ),
-            InkWell(
-              child:const DrawerButton(
-                  Iconbtton: Icons.person_2_outlined,
-                  buttonName: "Edit Account"
-              ),
-              onTap: (){},
+            Row(
+              children:const [
+                 SizedBox(
+                  width: 40,
+                ),
+                Icon(Icons.person_3_outlined),
+                 SizedBox(
+                  width: 20,
+                ),
+                Dropdownbutton(),
+              ],
             ),
             const SizedBox(
               height: 30,

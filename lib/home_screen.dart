@@ -15,20 +15,21 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      backgroundColor: Colors.grey,
-      appBar: AppBar(
-        backgroundColor: Colors.teal.shade400,
-        title: SearchBar(),
-        actions: [
-          Badge(
-            child: IconButton(onPressed: (){}, icon:const Icon(Icons.shopping_cart)),
-          ),
-         const SizedBox(width: 10,),
-        ],
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.teal.shade400,
+          title: SearchBar(),
+          actions: [
+            IconButton(
+                onPressed: (){},
+                icon: Icon(Icons.shopping_cart)),
+          ],
+        ),
+        drawer:const Drawers(),
+        body:const ProductListScreen(product: '',),
       ),
-      drawer:const Drawers(),
-      body:const ProductListScreen(product: '',),
     );
   }
 }
