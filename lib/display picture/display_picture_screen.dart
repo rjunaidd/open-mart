@@ -38,7 +38,8 @@ class _DisplayPictureScreenState extends State<DisplayPictureScreen> {
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 26,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeight.bold
+                ),
               ),
               const SizedBox(
                 height: 50,

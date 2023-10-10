@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-class ButtonCom extends StatelessWidget {
-  final String title;
-
-  const ButtonCom({super.key , required this.title});
+class EmailButtonC extends StatelessWidget {
+  final String emailbtn;
+  const EmailButtonC({super.key , required this.emailbtn});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return  Container(
       height: 50,
       width: 300,
       decoration: BoxDecoration(
@@ -15,7 +14,7 @@ class ButtonCom extends StatelessWidget {
           borderRadius: BorderRadius.circular(10)
       ),
       child: Center(
-        child: Text(title ,
+        child: Text(emailbtn ,
           style:const TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
