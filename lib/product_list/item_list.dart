@@ -80,7 +80,9 @@ class ItemListScreen extends StatelessWidget {
                               child: Text("Add to cart",
                           style: TextStyle(
                             color: Colors.white
-                          ),)),
+                          ),
+                              ),
+                          ),
                         ),
                       ),
                     ],
