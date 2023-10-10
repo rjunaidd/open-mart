@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-class MyTextField extends StatelessWidget {
+class ChangeEmail extends StatelessWidget {
   final TextEditingController controller;
   final Widget? leading;
   final Widget? trailIcon;
   final bool? obscureText;
   final String? hintText;
-  final IconData? suffixIcon;
   final TextInputType? keyboardType;
   final String? Function(String?)? validator;
   final int? maxLines;
@@ -17,18 +16,20 @@ class MyTextField extends StatelessWidget {
   final bool? readOnly;
   final Color? borderColor;
   final Color? labelColor;
+  final String label;
   final Color? hintColor;
   final Color? textColor;
   final FocusNode? focusNode;
-  final List<MyTextField>? inputFormatters;
+  final List<ChangeEmail>? inputFormatters;
   final bool? isPassword;
+  final IconData? suffixIcon;
 
- const MyTextField({
+  const ChangeEmail({
     super.key,
     required this.hintText,
     required this.controller,
-   this.obscureText,
-   this.suffixIcon,
+    this.suffixIcon,
+    this.obscureText,
     this.leading,
     this.keyboardType,
     this.onTap,
@@ -46,6 +47,7 @@ class MyTextField extends StatelessWidget {
     this.textColor,
     this.focusNode,
     this.inputFormatters,
+    required this.label
   });
 
   @override
@@ -66,9 +68,9 @@ class MyTextField extends StatelessWidget {
       style: TextStyle(color: textColor ?? Colors.black),
       onChanged: onChanged,
       decoration: InputDecoration(
-          hintText: hintText,
-          prefixIcon: leading,
-          suffixIcon: trailIcon,
+        hintText: hintText,
+        prefixIcon: leading,
+        suffixIcon: trailIcon,
 
       ),
 
